@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="form.js" defer></script>
+</head>
+<body>
+    <form novalidate>
+        <p>
+          <label for="mail">
+                <span>Please enter an email address:</span>
+                <input type="email" id="email" name="mail" required minlength="8" />
+                <span class="error" aria-live="polite"></span>
+          </label>
+        </p>
+        <p>
+            <label for="country">
+                <span>Please select your country:</span>
+                <select id="country" name="country" required>
+                    <option value="">Please select</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                    <option value="mexico">Mexico</option>
+                </select>
+                <span class="error" aria-live="polite"></span>
+            </label>
+        </p>
+        <p>
+            <label for="ZIP code">
+                <span>Please enter a ZIP code:</span>
+                <input type="text" id="zip" name="zip" required pattern="[0-9]{5}" />
+                <span class="error" aria-live="polite"></span>
+            </label>
+        </p>
+        <p>
+            <label for="password">
+                <span>Please enter a password:</span>
+                <input type="password" id="password" name="password" required minlength="8" />
+                <span class="error" aria-live="polite"></span>
+            </label>
+        </p>
+        <p>
+            <label for="password">
+                <span>Please confirm your password:</span>
+                <input type="password" id="confirm_password" name="confirm_password" required minlength="8" />
+                <span class="error" aria-live="polite"></span>
+            </label>
+        </p>
+        <button>Submit</button>
+      </form>
+      
+</body>
+</html>
